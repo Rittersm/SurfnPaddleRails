@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SurfnPaddleRails</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="row">
+        <div class="row" id="header">
+          <div class="col-md-4 col-md-offset-1">
+            <img class="img-responsive" id="logo1" src="image/logo-surf-and-paddle.svg" width="45">
+            <h4 id="logo2">Demotic Developer: A Blog</h4>
+          </div>
+          <div class="col-md-1 col-md-offset-4" id="about">
+            <h4>ABOUT</h4>
+          </div>
+          <div class="col-md-2" id="search">
+            <form method="get">
+              <h4>SEARCH</h4>
+              <input class="search" type="image" src="image/search.svg" width="20"/>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-md-offset-0 col-xs-6 col-xs-offset-3">
+            <p id="lgtitle" class="text-center">DEMOTIC DEVELOPER</p>
+          </div>
+          <div class="col-md-12">
+            <p id="subtitle" class="text-center hidden-sm hidden-xs">Programming From a Learning Perspective</p>
+          </div>
+        </div>
+      </header>
+    </div>
+    <main class="container" id="main">
+      <div class="row">
+        <div class="col-md-7" id="article">
+
+          <%= yield %>
+
+          <button type="button" class="btn btn-sm">
+            <span class="glyphicon glyphicon-comment"></span>
+            Read Comments
+          </button>
+          <button type="button" class="btn btn-sm">
+            <span class="glyphicon glyphicon-comment"></span>
+            Read Later
+          </button>
+          <button type="button" class="btn btn-sm">
+            <span class="glyphicon glyphicon-comment"></span>
+            Share This Post
+          </button>
+        </div>
+        <div class="col-md-3 col-md-offset-1 text-center">
+          <img class="img-circle" id="thumbnail" src="image/thumbnail.jpg">
+          <h4>Sean Ritter</h4>
+          <ul class="list-inline text-center" id="contactlist">
+            <li><a href="https://facebook.com">Facebook</a></li>
+            <li><a href="https://linkedin.com">Linkedin</a></li>
+            <li><a href="https://twitter.com">Twitter</a></li>
+          </ul>
+        </div>
+          <img class="hidden-sm hidden-xs" id="advertisement" src="image/advertisement.jpeg">
+          <a class="hidden-sm hidden-xs text-center" id="ad" href="#">About This Ad</a>
+          <div class="text-left" id="sidebar">
+            <h4 class="text-left">About This Blog</h4>
+            <p>Birth galaxies. Two ghostly white figures in coveralls and helmets are soflty dancing permanence of the stars, network of wormholes cosmic fugue dream of the mind's eye. Great turbulent clouds vanquish the impossible across the centuries a very small stage in a vast cosmic arena. Hundreds of thousands not a sunrise but a galaxyrise, inconspicuous motes of rock and gas vastness is bearable only through love, tingling of the spine, another world!</p>
+      </div>
+    </main>
+    <hr>
+    <footer class="container-fluid">
+      <div class="row">
+        <p class="text-center hidden-xs" id="footertitle">Explore The Cosmos</p>
+      </div>
+      <div class="row" id="footer">
+          <img class="col-md-3 col-sm-6 hidden-xs" id="footer1" src="image/footer1.jpeg">
+          <img class="col-md-3 col-sm-6 hidden-xs" id="footer2" src="image/footer2.jpeg">
+          <img class="col-md-3 col-sm-6 hidden-xs" id="footer3" src="image/footer3.jpeg">
+          <img class="col-md-3 col-sm-6 hidden-xs" id="footer4" src="image/footer4.jpeg">
+      </div>
+      <div class="row" id="navbar">
+        <div class="col-md-4 col-md-offset-1 col-sm-12">
+          <img class="img-responsive" id="navbar1" src="image/logo-surf-and-paddle.svg" width="35">
+          <h5 id="navbar2">Demotic Developer 2016, All Rights Reserved</h5>
+        </div>
+        <div class="col-md-3 col-md-offset-3 col-sm-6">
+          <a href="#">About Me</a>
+          <a href="#">Tour</a>
+          <a href="#">Contact</a>
+          <a href="#">Legal</a>
+        </div>
+    </footer>
+  </body>
+</html>
