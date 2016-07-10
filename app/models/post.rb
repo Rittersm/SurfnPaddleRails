@@ -1,12 +1,14 @@
 class Post
 
-  attr_accessor :id, :title, :body, :author, :created_at
+  attr_accessor :id, :title, :body, :author, :profile, :icon, :created_at
 
   def initialize(args)
     self.id         = args[:id]
     self.title      = args[:title]
     self.body       = args[:body]
     self.author     = args[:author]
+    self.profile    = args[:profile]
+    self.icon       = args[:icon]
     self.created_at = args[:created_at] || Time.now
   end
 
@@ -17,6 +19,8 @@ class Post
           id: 1,
           title:  "The Apes and The Two Travelers",
           author: "Aesop",
+          profile: "aesop",
+          icon: "footer1",
           body: %q(
             Two men were travelling together, one of whom never spoke the truth, whereas the other never told a lie: and they came in the course of their travels to the land of Apes.
 
@@ -42,6 +46,8 @@ class Post
           id: 2,
           title: "Plymouth Rock and the Pilgrims",
           author: "Mark Twain",
+          profile: "twain",
+          icon: "footer2",
           body: %q(
             I rise to protest. I have kept still for years; but really I think there is no sufficient justification for this sort of thing. What do you want to celebrate those people for? - those ancestors of yours of 1620 - the Mayflower tribe, I mean. What do you want to celebrate them for? Your pardon: the gentleman at my left assures me that you are not celebrating the Pilgrims themselves, but the landing of the Pilgrims at Plymouth rock on the 22d of December. So you are celebrating their landing. Why, the other pretext was thin enough, but this is thinner than ever; the other was tissue, tinfoil, fish-bladder, but this is gold-leaf.  Celebrating their lauding! What was there remarkable about it, I would like to know? What can you be thinking of? Why, those Pilgrims had been at sea three or four months. It was the very middle of winter: it was as cold as death off Cape Cod there. Why shouldn't they come ashore? If they hadn't landed there would be some reason for celebrating the fact: It would have been a case of monumental leatherheadedness which the world would not willingly let die. If it had been you, gentlemen, you probably wouldn't have landed, but you have no shadow of right to be celebrating, in your ancestors, gifts which they did not exercise, but only transmitted. Why, to be celebrating the mere landing of the Pilgrims - to be trying to make out that this most natural and simple and customary procedure was an extraordinary circumstance - a circumstance to be amazed at, and admired, aggrandized and glorified, at orgies like this for two hundred and sixty years - hang it, a horse would have known enough to land; a horse - Pardon again; the gentleman on my right assures me that it was not merely the landing of the Pilgrims that we are celebrating, but the Pilgrims themselves. So we have struck an inconsistency here - one says it was the landing, the other says it was the Pilgrims. It is an inconsistency characteristic of your intractable and disputatious tribe, for you never agree about anything but Boston.  Well, then, what do you want to celebrate those Pilgrims for? They were a mighty hard lot - you know it. I grant you, without the slightest unwillingness, that they were a deal more gentle and merciful and just than were the people of Europe of that day; I grant you that they are better than their predecessors. But what of that? - that is nothing.  People always progress. You are better than your fathers and grandfathers were (this is the first time I have ever aimed a measureless slander at the departed, for I consider such things improper). Yes, those among you who have not been in the penitentiary, if such there be, are better than your fathers and grandfathers were; but is that any sufficient reason for getting up annual dinners and celebrating you? No, by no means - by no means. Well, I repeat, those Pilgrims were a hard lot. They took good care of themselves, but they abolished everybody else's ancestors. I am a border-ruffian from the State of Missouri. I am a Connecticut Yankee by adoption. In me, you have Missouri morals, Connecticut culture; this, gentlemen, is the combination which makes the perfect man. But where are my ancestors?  Whom shall I celebrate? Where shall I find the raw material?
 
@@ -63,6 +69,8 @@ class Post
           id: 3,
           title:  "The Lady in Pink",
           author: "Sir Arthur Conan Doyle",
+          profile: "doyle",
+          icon: "footer3",
           body: %q(
             Two men were travelling together, one of whom never spoke the truth, whereas the other never told a lie: and they came in the course of their travels to the land of Apes.
 
@@ -88,6 +96,8 @@ class Post
           id: 4,
           title:  "Consider the Lobster",
           author: "David Foster Wallace",
+          profile: "wallace",
+          icon: "footer4",
           body: %q(
             Two men were travelling together, one of whom never spoke the truth, whereas the other never told a lie: and they came in the course of their travels to the land of Apes.
 
@@ -113,6 +123,8 @@ class Post
           id: 5,
           title:  "Dr. Strangelove (or, how I learned to stop worrying and love the bomb)",
           author: "Stanley Kubrick",
+          profile: "kubrick",
+          icon: "footer5",
           body: %q(
             Two men were travelling together, one of whom never spoke the truth, whereas the other never told a lie: and they came in the course of their travels to the land of Apes.
 

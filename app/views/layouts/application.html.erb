@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SurfnPaddleRails</title>
+    <title><%= @posts.title %></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@
       <header class="row">
         <div class="row" id="header">
           <div class="col-md-4 col-md-offset-1">
-            <img class="img-responsive" id="logo1" src="image/logo-surf-and-paddle.svg" width="45">
+            <%= image_tag "logo-surf-and-paddle", class: "img-responsive", id: "logo1"%>
             <h4 id="logo2">Demotic Developer: A Blog</h4>
           </div>
           <div class="col-md-1 col-md-offset-4" id="about">
@@ -23,7 +23,7 @@
           <div class="col-md-2" id="search">
             <form method="get">
               <h4>SEARCH</h4>
-              <input class="search" type="image" src="image/search.svg" width="20"/>
+              <input class="search" id="search_icon" type="image" src="<%= image_path("search.svg") %>"/>
             </form>
           </div>
         </div>
@@ -48,28 +48,28 @@
             Read Comments
           </button>
           <button type="button" class="btn btn-sm">
-            <span class="glyphicon glyphicon-comment"></span>
+            <span class="glyphicon glyphicon-download-alt"></span>
             Read Later
           </button>
           <button type="button" class="btn btn-sm">
-            <span class="glyphicon glyphicon-comment"></span>
+            <span class="glyphicon glyphicon-envelope"></span>
             Share This Post
           </button>
         </div>
         <div class="col-md-3 col-md-offset-1 text-center">
-          <img class="img-circle" id="thumbnail" src="image/thumbnail.jpg">
-          <h4>Sean Ritter</h4>
+          <%= image_tag @posts.profile, class: 'img-circle', id: 'thumbnail' %>
+          <h4><%= @posts.author %></h4>
           <ul class="list-inline text-center" id="contactlist">
             <li><a href="https://facebook.com">Facebook</a></li>
             <li><a href="https://linkedin.com">Linkedin</a></li>
             <li><a href="https://twitter.com">Twitter</a></li>
           </ul>
-        </div>
-          <img class="hidden-sm hidden-xs" id="advertisement" src="image/advertisement.jpeg">
+          <%= image_tag "advertisement", class: 'img-responsive hidden-sm hidden-xs', id: 'advertisement' %>
           <a class="hidden-sm hidden-xs text-center" id="ad" href="#">About This Ad</a>
           <div class="text-left" id="sidebar">
             <h4 class="text-left">About This Blog</h4>
             <p>Birth galaxies. Two ghostly white figures in coveralls and helmets are soflty dancing permanence of the stars, network of wormholes cosmic fugue dream of the mind's eye. Great turbulent clouds vanquish the impossible across the centuries a very small stage in a vast cosmic arena. Hundreds of thousands not a sunrise but a galaxyrise, inconspicuous motes of rock and gas vastness is bearable only through love, tingling of the spine, another world!</p>
+        </div>
       </div>
     </main>
     <hr>
@@ -78,14 +78,16 @@
         <p class="text-center hidden-xs" id="footertitle">Explore The Cosmos</p>
       </div>
       <div class="row" id="footer">
-          <img class="col-md-3 col-sm-6 hidden-xs" id="footer1" src="image/footer1.jpeg">
-          <img class="col-md-3 col-sm-6 hidden-xs" id="footer2" src="image/footer2.jpeg">
-          <img class="col-md-3 col-sm-6 hidden-xs" id="footer3" src="image/footer3.jpeg">
-          <img class="col-md-3 col-sm-6 hidden-xs" id="footer4" src="image/footer4.jpeg">
+          <% @post_images.each do |icon| %>
+            <div class="col-md-3 col-sm-6 col-xs-12" id="footerimages">
+              <%= link_to image_tag(icon.icon), posts_path(id: icon.id) %>
+              <h4><%= link_to icon.title, posts_path(id: icon.id) %></h4>
+            </div>
+          <% end %>
       </div>
       <div class="row" id="navbar">
         <div class="col-md-4 col-md-offset-1 col-sm-12">
-          <img class="img-responsive" id="navbar1" src="image/logo-surf-and-paddle.svg" width="35">
+          <%= image_tag "logo-surf-and-paddle", class: "img-responsive", id: "navbar1" %>
           <h5 id="navbar2">Demotic Developer 2016, All Rights Reserved</h5>
         </div>
         <div class="col-md-3 col-md-offset-3 col-sm-6">
