@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'post#index'
 
   get 'post/:id' => 'post#show', as: :posts
+  get 'about' => 'about#info', as: :about
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
