@@ -24,7 +24,7 @@ header {
   color: rgb(50, 50, 50);
 }
 
-#about {
+#about a {
   margin-right: -30px;
   color: rgb(50, 50, 50)
 }
@@ -126,6 +126,12 @@ hr {
 }
 
 #footertitle {
+  font-size: 6vw;
+  font-family: Impact, Charcoal, sans-serif;
+  color:rgba(19, 12, 156, 0.8);
+}
+
+#footertitle a{
   font-size: 6vw;
   font-family: Impact, Charcoal, sans-serif;
   color:rgba(19, 12, 156, 0.8);

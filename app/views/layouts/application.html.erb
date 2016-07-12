@@ -18,7 +18,7 @@
             <h4 id="logo2">Demotic Developer: A Blog</h4>
           </div>
           <div class="col-md-1 col-md-offset-4" id="about">
-            <h4><% link_to "ABOUT", about_path %></h4>
+            <h4><%= link_to "ABOUT", about_path %></h4>
           </div>
           <div class="col-md-2" id="search">
             <form method="get">
@@ -57,8 +57,8 @@
           </button>
         </div>
         <div class="col-md-3 col-md-offset-1 text-center">
-          <%= image_tag @posts.profile, class: 'img-circle', id: 'thumbnail' %>
-          <h4><%= @posts.author %></h4>
+          <%= image_tag @posts.author.profile, class: 'img-circle', id: 'thumbnail' %>
+          <h4><%= @posts.author.name %></h4>
           <ul class="list-inline text-center" id="contactlist">
             <li><a href="https://facebook.com">Facebook</a></li>
             <li><a href="https://linkedin.com">Linkedin</a></li>

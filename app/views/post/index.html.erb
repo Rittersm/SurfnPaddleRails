@@ -1,7 +1,7 @@
 <p id="articletitle"><%= @posts.title %></p>
 <div id="author">
-  <%= image_tag @posts.profile, class: "img-circle", id: 'authorpic' %>
-  <p id="author1"><%= @posts.author %> </p>
+  <%= image_tag @posts.author.profile, class: "img-circle", id: 'authorpic' %>
+  <p id="author1"><%= @posts.author.name %> </p>
   <p id="author1">on</p>
   <u id="author1"><%= @posts.created_at %></u>
 </div>
