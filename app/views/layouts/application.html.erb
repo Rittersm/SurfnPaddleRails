@@ -18,7 +18,7 @@
             <h4 id="logo2">Demotic Developer: A Blog</h4>
           </div>
           <div class="col-md-1 col-md-offset-4" id="about">
-            <h4>ABOUT</h4>
+            <h4><% link_to "ABOUT", about_path %></h4>
           </div>
           <div class="col-md-2" id="search">
             <form method="get">
@@ -64,7 +64,7 @@
             <li><a href="https://linkedin.com">Linkedin</a></li>
             <li><a href="https://twitter.com">Twitter</a></li>
           </ul>
-          <%= image_tag "advertisements/#{rand(6)}.jpeg", class: '' 'img-responsive', id: 'advertisement' %>
+          <%= image_tag "advertisements/#{rand(6)}", class: 'img-responsive', id: 'advertisement' %>
           <a class="text-center" id="ad" href="#">About This Ad</a>
           <div class="text-left" id="sidebar">
             <h4 class="text-left"><%= link_to "About This Blog", about_path %></h4>
