@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
 
   belongs_to :author
-  validates_presence_of :title
-  validates_length_of :body, minimum: 150
+  validates :title, presence: true, length: {minimum: 200}
+  validates_presence_of :author
 
 end
