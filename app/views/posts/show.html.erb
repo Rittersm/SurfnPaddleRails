@@ -1,0 +1,29 @@
+  <p id="articletitle"><%= @posts.title %></p>
+  <div id="author">
+    <%= image_tag @posts.author.profile, class: "img-circle", id: 'authorpic' %>
+    <p id="author1"><%= @posts.author.name %> </p>
+    <p id="author1">on</p>
+    <u id="author1"><%= @posts.created_at %></u>
+  </div>
+  <p id="articlebody"><%= @posts.body %></p>
+    <button type="button" class="btn btn-sm">
+      <span class="glyphicon glyphicon-comment"></span>
+      Read Comments
+    </button>
+    <button type="button" class="btn btn-sm">
+      <span class="glyphicon glyphicon-download-alt"></span>
+      Read Later
+    </button>
+    <button type="button" class="btn btn-sm">
+      <span class="glyphicon glyphicon-envelope"></span>
+      Share This Post
+    </button>
+</div>
+<div class="col-md-3 col-md-offset-1 text-center">
+  <%= image_tag @posts.author.profile, class: 'img-circle', id: 'thumbnail' %>
+  <h4><%= @posts.author.name %></h4>
+  <ul class="list-inline text-center" id="contactlist">
+    <li><a href="https://facebook.com">Facebook</a></li>
+    <li><a href="https://linkedin.com">Linkedin</a></li>
+    <li><a href="https://twitter.com">Twitter</a></li>
+  </ul>

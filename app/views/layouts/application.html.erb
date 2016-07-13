@@ -15,7 +15,7 @@
         <div class="row" id="header">
           <div class="col-md-4 col-md-offset-1">
             <%= image_tag "logo-surf-and-paddle", class: "img-responsive", id: "logo1"%>
-            <h4 id="logo2">Demotic Developer: A Blog</h4>
+            <h4 id="logo2"><%= link_to "Demotic Developer: A Blog", root_path %></h4>
           </div>
           <div class="col-md-1 col-md-offset-4" id="about">
             <h4><%= link_to "ABOUT", about_path %></h4>
@@ -43,7 +43,6 @@
 
           <%= yield %>
 
-
           <%= image_tag "advertisements/#{rand(6)}", class: 'img-responsive', id: 'advertisement' %>
           <a class="text-center" id="ad" href="#">About This Ad</a>
           <div class="text-left" id="sidebar">
@@ -60,8 +59,8 @@
       <div class="row" id="footer">
           <% @post_images.each do |icon| %>
             <div class="col-md-3 col-sm-6 col-xs-12" id="footerimages">
-              <%= link_to image_tag(icon.icon), posts_path(id: icon.id) %>
-              <h4><%= link_to icon.title, posts_path(id: icon.id) %></h4>
+              <%= link_to image_tag(icon.icon), post_path(id: icon.id) %>
+              <h4><%= link_to icon.title, post_path(id: icon.id) %></h4>
             </div>
           <% end %>
       </div>
