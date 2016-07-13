@@ -18,6 +18,10 @@
       <span class="glyphicon glyphicon-envelope"></span>
       Share This Post
     </button>
+    <%= link_to edit_post_path(@posts), :class => "btn btn-sm" do %>
+      <span class="glyphicon glyphicon-pencil"></span>
+      Edit This Post
+    <% end %>
 </div>
 <div class="col-md-3 col-md-offset-1 text-center">
   <%= image_tag @posts.author.profile, class: 'img-circle', id: 'thumbnail' %>
