@@ -1,7 +1,7 @@
 
   <% @posts.each do |post| %>
     <div class = "indexbody">
-      <p id="articletitle"><%= post.title %></p>
+      <p id="articletitle"><%= link_to post.title, post %></p>
       <div id="author">
         <%= image_tag post.author.profile, class: "img-circle", id: 'authorpic' %>
         <p id="author1"><%= post.author.name %> </p>
