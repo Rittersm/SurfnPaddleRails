@@ -13,8 +13,7 @@
     </fieldset>
     <fieldset class="form-group">
       <%= f.label :author_id %>
-      <%= f.text_field :author_id, :class => "form-control", :placeholder => "Author ID Number" %>
-    </fieldset>
+      <%= f.collection_select :author_id, Author.order(:id),:id,:name, include_blank: true, :class => "form-control" %>
     <fieldset class="form-group">
       <%= f.label :icon %>
       <%= f.text_field :icon, :class => "form-control", :placeholder => "URL" %>

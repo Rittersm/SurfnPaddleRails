@@ -1,0 +1,24 @@
+<h2 class= "admin_title">Register New Author</h2>
+
+<% if @author.errors.any? %>
+<ul>
+  <% @author.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for @author do |f| %>
+  <fieldset class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, :class => "form-control", :placeholder => "Author Name" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :profile %>
+    <%= f.text_field :profile, :class => "form-control", :placeholder => "Load profile picture: URL only." %>
+  </fieldset>
+  <%= f.submit :class => "btn btn-primary submit-button" %>
+  <small class="text-muted">Please ensure all fields have been completed</small>
+<% end %>
+</div>
+<div class="col-md-3 col-md-offset-1 text-center">

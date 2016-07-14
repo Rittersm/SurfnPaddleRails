@@ -17,7 +17,10 @@
             <%= image_tag "logo-surf-and-paddle", class: "img-responsive", id: "logo1"%>
             <h4 id="logo2"><%= link_to "Demotic Developer: A Blog", root_path %></h4>
           </div>
-          <div class="col-md-1 col-md-offset-3" id="create">
+          <div class="col-md-1 col-md-offset-2" id="new_author">
+            <h4><%= link_to "REGISTER", new_author_path %></h4>
+          </div>
+          <div class="col-md-1" id="create">
             <h4><%= link_to "NEW POST", new_post_path %></h4>
           </div>
           <div class="col-md-1" id="about">

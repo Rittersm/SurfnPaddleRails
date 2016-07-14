@@ -13,6 +13,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @page_title = "Create New Post"
     @post = Post.new
     @post_images = Post.all.order(created_at: :desc).limit(4)
   end
@@ -28,6 +29,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @page_title = "Edit Your Post"
     @post = Post.find(params[:id])
     @post_images = Post.all.order(created_at: :desc).limit(4)
   end

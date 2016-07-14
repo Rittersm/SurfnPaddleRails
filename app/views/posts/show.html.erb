@@ -5,7 +5,7 @@
     <p id="author1">on</p>
     <u id="author1"><%= @posts.created_at %></u>
   </div>
-  <p id="articlebody"><%= @posts.body %></p>
+  <%= simple_format(@posts.body, id: "articlebody") %>
     <button type="button" class="btn btn-sm">
       <span class="glyphicon glyphicon-comment"></span>
       Read Comments
