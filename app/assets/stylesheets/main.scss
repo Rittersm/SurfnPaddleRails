@@ -1,0 +1,225 @@
+header {
+  height: 525px;
+  background: linear-gradient(
+    rgba(13, 0, 200, 0.50),
+    rgba(13, 0, 200, 0.20)
+    ),
+    image-url("header_fog") no-repeat;
+  background-size: cover;
+  border-bottom: 10px solid rgb(13, 42, 142);
+  color: rgb(248, 241, 249);
+}
+
+#header {
+  padding-top:10px;
+}
+
+#logo1 {
+  display: inline;
+  width: 45px
+}
+
+#logo2  {
+  display: inline;
+}
+#logo2 a {
+  color: rgb(50, 50, 50);
+}
+
+#create a {
+  color: rgb(50, 50, 50);
+}
+
+#new_author a {
+  color: rgb(50, 50, 50);
+}
+
+#about  {
+  margin-right: -30px;
+}
+
+#about a {
+  margin-right: -30px;
+  color: rgb(50, 50, 50)
+}
+
+#search {
+  margin-top: 6px;
+  color: rgb(50, 50, 50);
+}
+
+#search_icon {
+  width: 20px
+}
+
+#search h4 {
+  display: inline;
+}
+
+#lgtitle {
+  margin-top: 140px;
+  font-size: 7vw;
+  font-stretch: extra-condensed;
+  font-weight: bold;
+}
+
+#subtitle {
+  margin-top: -25px;
+  color: rgb(50, 50, 50);
+  font-size: 16px;
+}
+
+#main {
+  padding-top: 50px;
+}
+
+#articletitle {
+  font-size: 6vw;
+  font-family: Impact, Charcoal, sans-serif;
+  line-height: 90%;
+}
+#articletitle a {
+  color: black;
+}
+
+#authorpic {
+  width: 30px;
+}
+
+#author1 {
+  display: inline;
+}
+
+.articlebody {
+  padding-top: 30px;
+}
+
+.indexbody {
+  margin-bottom: 30px;
+}
+
+#textinsert{
+  margin-left: 10px;
+  margin-bottom: -30px;
+  padding: 10px;
+  font-size: 30px;
+  color: rgb(91, 103, 233);
+  border-left: 2px solid rgba(177, 177, 177, 0.7);
+}
+
+#article .btn  {
+  background-color: rgba(240, 240, 240, 0.7);
+}
+
+#article .btn:hover{
+  background-color: rgba(91, 103, 233, 0.5);
+}
+#article a.btn  {
+  color: black;
+}
+
+#thumbnail {
+  width: 100px;
+  margin-top: 25px;
+}
+
+#contactlist {
+  margin-bottom: 50px;
+}
+
+#ad {
+  color: rgba(170, 168, 168, 0.5);
+}
+
+#sidebar {
+  padding-top: 30px;
+}
+
+#sidebar h4 {
+  color: rgba(91, 103, 233, 0.5);
+}
+
+#sidebar p {
+  color: rgb(110, 110, 110);
+}
+
+hr {
+  display: block;
+  margin-top: 50px;
+  border-top: 2px solid rgb(170, 168, 168);
+}
+
+#footertitle {
+  font-size: 6vw;
+  font-family: Impact, Charcoal, sans-serif;
+  color:rgba(19, 12, 156, 0.8);
+}
+
+#footertitle a{
+  font-size: 6vw;
+  font-family: Impact, Charcoal, sans-serif;
+  color:rgba(19, 12, 156, 0.8);
+}
+// Overall Container
+#footer {
+  background-color:rgb(19, 12, 156);
+}
+
+#footerimages {
+  position: relative;
+  margin: 0;
+  padding: 0
+}
+
+#footerimages a {
+  color: rgba(240, 240, 240, 0.7);
+}
+// Images
+#footerimages a img {
+  padding: 0;
+  opacity: 0.8;
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+#footerimages a img:hover {
+  opacity: 1.0;
+}
+// Titles
+#footerimages h4 {
+  font-size: 25px;
+  position: absolute;
+  top: 75%;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+#navbar {
+  height: 75px;
+  padding-top: 10px;
+  background-color: rgba(19, 12, 156, 0.75)
+}
+
+#navbar1 {
+  display: inline-block;
+  width: 35px
+}
+
+#navbar2 {
+  display: inline-block;
+  color: rgb(173, 172, 172);
+}
+
+#navbar a {
+  border-left: 2px solid gray;
+  color: rgb(173, 172, 172);
+  display: inline;
+  font-size: 12px;
+  margin: 0px;
+  padding-left: 10px;
+  padding-right: 0px;
+}
+.submit-button {
+  color: black;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,32 @@
+  <%= paginate @posts %>
+  <% @posts.each do |post| %>
+    <div class = "indexbody">
+      <p id="articletitle"><%= link_to post.title, post %></p>
+      <div id="author">
+        <%= image_tag post.author.profile, class: "img-circle", id: 'authorpic' %>
+        <p id="author1"><%= post.author.name %> </p>
+        <p id="author1">on</p>
+        <u id="author1"><%= post.created_at %></u>
+      </div>
+      <div class= "articlebody"><%= simple_format(truncate(post.body, length: 500, separator: " ")) %></div>
+        <button type="button" class="btn btn-sm">
+          <span class="glyphicon glyphicon-comment"></span>
+          Read Comments
+        </button>
+        <button type="button" class="btn btn-sm">
+          <span class="glyphicon glyphicon-download-alt"></span>
+          Read Later
+        </button>
+        <button type="button" class="btn btn-sm">
+          <span class="glyphicon glyphicon-envelope"></span>
+          Share This Post
+        </button>
+        <%= link_to post, :class => "btn btn-sm" do %>
+          <span class="glyphicon glyphicon-book"></span>
+          Read This Post
+        <% end %>
+    </div>
+  <% end %>
+  <%= paginate @posts %>
+</div>
+<div class="col-md-3 col-md-offset-1 text-center">

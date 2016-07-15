@@ -1,0 +1,28 @@
+  <% if post.errors.any? %>
+  <ul>
+    <% post.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+  <% end %>
+
+  <%= form_for @post do |f| %>
+    <fieldset class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, :class => "form-control", :placeholder => "Article Title" %>
+    </fieldset>
+    <fieldset class="form-group">
+      <%= f.label :author_id %>
+      <%= f.collection_select :author_id, Author.order(:id),:id,:name, {include_blank: true}, {:class => "form-control"} %>
+    <fieldset class="form-group">
+      <%= f.label :icon %>
+      <%= f.text_field :icon, :class => "form-control", :placeholder => "URL" %>
+      <small class="text-muted">Please import a square image for the sake of layout</small>
+    </fieldset>
+    <fieldset class="form-group">
+      <%= f.label :body %>
+      <%= f.text_area :body, :class => "form-control", :rows => "10", :placeholder => "Write article here, 200 char. minimum." %>
+    </fieldset>
+      <%= f.submit :class => "btn btn-primary submit-button" %>
+      <small class="text-muted">Please ensure all fields have been completed</small>
+  <% end %>
