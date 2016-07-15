@@ -1,4 +1,4 @@
-
+  <%= paginate @posts %>
   <% @posts.each do |post| %>
     <div class = "indexbody">
       <p id="articletitle"><%= link_to post.title, post %></p>
@@ -27,5 +27,6 @@
         <% end %>
     </div>
   <% end %>
+  <%= paginate @posts %>
 </div>
 <div class="col-md-3 col-md-offset-1 text-center">

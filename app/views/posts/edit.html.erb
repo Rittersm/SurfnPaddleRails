@@ -1,3 +1,6 @@
 <h2 class= "admin_title">Edit Post</h2>
 
-<%= render partial: "form", locals: {post: @post} %>
+  <%= render partial: "form", locals: {post: @post} %>
+  <%= button_to "Delete Post", post_path(@post), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary submit-button" %>  
+</div>
+<div class="col-md-3 col-md-offset-1 text-center">

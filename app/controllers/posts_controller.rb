@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
   def index
     @page_title = "Main Page"
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.all.order(created_at: :desc).page(params[:page]).per(10)
     @post_images = Post.all.order(created_at: :desc).limit(4)
   end
 
@@ -42,6 +42,13 @@ class PostsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to root_path
+  end
+
 
   private
 
